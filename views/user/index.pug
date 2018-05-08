@@ -1,0 +1,49 @@
+extends ../layout
+
+block page_css
+
+block content
+  
+    <div class="content">
+        <div class="container-fluid">
+
+            <!-- dataTables -->
+            <div class="row">
+
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="header">
+                            <h4 class="title">GH Team List</h4>
+                            <p class="category"></p>
+                        </div>
+                        <div class="content">
+
+                            <div class="row" style="margin-bottom: 10px;">
+                                <div class="col-md-12">
+                                    <button id="team_add" href="javascript:;"  class="btn btn-primary">Add Team</a>
+                                </div>
+                            </div>
+                         
+                            <div class="fresh-datatables">
+                                <table id="team_list" class="table table-striped table-no-bordered table-hover" cellspacing="0" width="100%" style="width:100%">
+                                    <thead>
+                                      <tr>
+                                        <th>Name</th>
+                                        <th class="disabled-sorting">Actions</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody></tbody>
+
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+block page_scripts
+    script(src='/js/bootstrap-table.js')
+    script(src='/js/jquery.datatables.js')
+    script(src='/js/users/index.js')

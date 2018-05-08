@@ -1,0 +1,69 @@
+doctype html
+html
+  head
+    <meta charset='utf-8'/>
+    <link rel="apple-touch-icon" sizes="76x76" href="/images/icon-128x123.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/images/icon-128x123.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+    title= title
+    link(rel='stylesheet', href='/css/custom_style.css')
+    link(rel='stylesheet', href='/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/css/animate.min.css')
+    link(rel='stylesheet', href='/css/themify-icons.css')
+    link(rel='stylesheet', href='/css/paper-dashboard.css')
+    link(href='http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css', rel='stylesheet')
+    link(href='https://fonts.googleapis.com/css?family=Muli:400,300', rel='stylesheet', type='text/css')
+    block page_css
+    script(src='/js/jquery-1.10.2.js')
+  body
+    <div class='loader-img' id='loader-img'></div>
+    <div class="wrapper">
+        <div class="sidebar" data-background-color="white" data-active-color="danger">
+            include includes/side_menu.pug
+        </div>
+        <div class="main-panel">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar bar1"></span>
+                        <span class="icon-bar bar2"></span>
+                        <span class="icon-bar bar3"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Users</a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="ti-share-alt"></i>
+                                <p onclick="location.href='/logout'">Logout</p>
+                            </a>
+                        </li>
+                        <li class="dropdown">
+                              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <i class="ti-settings"></i>
+                                    <p>Eman</p>
+                                    <b class="caret"></b>
+                              </a>
+                              <ul class="dropdown-menu">
+                                <li><a href="#">Profile</a></li>
+                                <li><a href="#">Change Password</a></li>
+                              </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        block content
+        </div>
+    </div>
+
+    script(src='/js/bootstrap.min.js')
+    script(src='/js/paper-dashboard.js')
+    script(src='/js/base.js')
+    script(src='/js/global_init.js')
+    block page_scripts

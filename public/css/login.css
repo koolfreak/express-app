@@ -1,0 +1,28 @@
+/** additonal css for login **/
+.card .card-header {
+	padding: 20px 15px 0px;
+		position: relative;
+		border-radius: 3px 3px 0 0;
+		z-index: 3;
+}
+.card .card-content {
+	padding: 15px 15px 10px 15px;
+}
+
+.full-page {
+	background: #f4f3ef;
+	display: block;
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 2;
+}
+.login-page > .content {
+	padding-top: 20vh;
+}
+.full-page > .content {
+	min-height: calc(100vh - 70vh);
+}
